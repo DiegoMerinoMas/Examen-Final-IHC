@@ -1,0 +1,532 @@
+/* Common Fonts import */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+
+/* General Common Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+    scroll-behavior: smooth !important;
+}
+
+ul, nav {
+    list-style: none;
+}
+
+nav .container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+nav .container #showNav, nav .container #toogleNav{
+    display: none;
+}
+
+nav .container ul{
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+
+hr {
+    width: 150px;
+    height: 2px;
+    background-color: #2196F3;
+    border: 0;
+    margin-bottom: 80px;
+}
+
+/* Section Common Styles */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 125px 100px;
+}
+
+@media (max-width: 1000px) {
+
+    section {
+        padding: 100px 50px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 80px 30px;
+    }
+
+}
+
+section h3.title {
+    color: #414a4f;
+    text-transform: capitalize;
+    font: bold 32px 'Open Sans', sans-serif;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+section p {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 2;
+}
+
+
+ul.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Header Section */
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 35px 100px 0;
+}
+
+header h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+header nav {
+   display: flex;
+}
+
+header nav li {
+    margin: 0 15px;
+}
+
+header nav li:first-child {
+    margin-left: 0;
+}
+
+header nav li:last-child {
+    margin-right: 0;
+}
+
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h2 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #2196F3;
+    z-index: -1;
+}
+
+.hero .background-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #414a4f;
+    opacity: 0.75;
+}
+
+.hero h1 {
+    font: bold 60px 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font: normal 28px 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+}
+
+.hero a.btn {
+    padding: 20px 46px;
+}
+
+@media (max-width: 800px) {
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero .background-image{
+        min-width: 15%;
+        background-position: center;
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        margin: 15px;
+    }
+
+    .hero h3 {
+        font-size: 16;
+    }
+
+    .hero a.btn {
+        margin: 16px;
+        padding: 15px 40px;
+    }
+
+}
+
+/* Our Work Section */
+
+.оur-work {
+    background-color: #fff;
+}
+
+.our-work .grid li {
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+
+.our-work .grid li.small {
+    flex-basis: 40%;
+}
+
+.our-work .grid li.large {
+    flex-basis: 60%;
+}
+
+
+@media (max-width: 900px) {
+
+    .our-work .grid li.small,
+    .our-work .grid li.large {
+        flex-basis: 100%;
+    }
+
+}
+
+/* Services Section */
+
+.services {
+    background-color: #f7f7f7;
+}
+
+.services .btn {
+    background-color: lightcoral;
+    border-radius: 15px;
+    border-color: #ddd;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.services .grid li {
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.services .grid li i {
+    font-size: 200px;
+    color: #48D4D4;
+    margin-bottom: 25px;
+}
+
+.services .grid li h4 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.services .grid li p {
+    margin: 0;
+}
+
+.services .grid li button i {
+    font-size: 50px;
+    margin-right: 0px;
+    color: #5CEBC3;
+}
+
+@media (max-width: 700px) {
+    .services{
+        width: 100%;
+    }
+
+    .services .grid li {
+        flex-basis: 100%;
+        margin-bottom: 65px;
+    }
+
+    .services .grid li .btn{
+        margin: 25px;   
+    }
+
+    .services .grid li .btn i{
+        margin: 5px;
+    }
+}
+
+/* planes buttons */
+.plans .btn {
+    background-color: lightcoral;
+    border-radius: 15px;
+    border-color: #ddd;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.plans {
+    background-color: white;
+}
+
+.plans .grid li {
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.plans .grid li i {
+    font-size: 200px;
+    color: #48D4D4;
+    margin-bottom: 25px;
+}
+
+.plans .grid li h4 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.plans .grid li button i {
+    font-size: 50px;
+    margin-right: 0px;
+    color: #5CEBC3;
+}
+
+/* Give a border for plans grid */
+.plans .grid li {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+.plans .grid li h3 {
+    margin-bottom: 0px;
+}
+
+.plans .grid .features li{
+    border: none;
+    margin: 0;
+    padding: 5px;
+    margin-bottom: none;
+    border-radius: 0px;
+    /*Decorar*/
+    color: #555;
+    font-size: 16px;
+}
+
+.plans .grid .features .price{
+    border: none;
+    margin: 0;
+    padding: 5px;
+    margin-bottom: none;
+    border-radius: 0px;
+    /*Decorar*/
+    color: goldenrod;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+
+    .plans .grid li {
+        flex-basis: 100%;
+    }
+
+    .plans .grid li .btn{
+        margin: 25px;   
+    }
+
+    .plans .grid li .btn i{
+        margin: 5px;
+    }
+}
+
+/* Footer Section */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 33%;
+    justify-content: center;
+    color: #fff;
+    background-color: #414a4f;
+    padding: 60px 0;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+footer ul li {
+    margin: 0 25px;
+}
+
+footer ul li:first-child {
+    margin-left: 0;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer ul li a {
+    font-size: 100px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+footer p a {
+    color: #fff;
+}
+
+footer .linkedin{
+    color: lightskyblue;
+}
+
+@media (max-width: 700px) {
+
+    footer {
+        padding: 50px 5px;
+        width: 100%;
+    }
+
+    footer ul li i{
+        flex-direction: column;
+        font-size: 50px;
+    }
+}
+
+/* TOS Section */
+
+.tos {
+    background-color: #f7f7f7;
+}
+
+.tos li {
+    max-width: 800px;
+    text-align: justify;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 2;
+}
+
+grid.a.btn {
+    padding: 20px 46px;
+}
+
+/* Dark cover when the cursor is over the button*/
+.btn:hover {
+    background-color: coral;
+    border-radius: 35px;
+}
